@@ -1,0 +1,316 @@
+1.What is stack unwinding
+
+2.different design patterns in microservices
+
+3.You have a array of string and the strings may contain space. Remove the spaces using java8 feature.
+
+4.You have a list of numbers like (1,2,3,11,12,13,15,16,17,20,21,23), find the number of sequence.
+
+>>Write a code to find the length of the last word of a given string.
+
+
+>>What ws the output of the following program?
+
+public class Questions {
+    public static void main(String[] args) {
+        foo(null);
+    }
+    public static void foo(Object o) {
+        System.out.println("Object impl");
+    }
+    public static void foo(String s) {
+        System.out.println("String impl");
+    }
+}
+
+
+
+
+
+>>Create an attendance register from the data provided. Create the following class:
+
+ The CustomRegister class should implement the Register interface and should have one class variable of type HashMap<Integer, Integer> named register. It should also contain the following methods:
+CustomRegister( ): It should initialize the class variable register with an empty HashMap.
+void addAttendance(int[ ] a): The array a contains the IDs of students. The attendance of a student is equal to the number of times his/her ID occurs in a. Add the attendances to the register variable in the form <studentID, attendance>.
+void changeAttendance(int id, char c):
+ If the character c is equal to 'A', then the attendance of the student with ID = id should be reduced by one. It should also print "The attendance of student with id: {id} has been reduced by one", where id denotes the id of the student.
+If c is equal to 'P', then the attendance of the student with ID = id should be increased by one. It should also print "The attendance of student with id: {id} has been increased by one".
+void reduceRegister(int limit): First it should print the following, "Removing students with less attendance". It should remove the entries of all students with attendance less than the limit, from the register.
+void personalAttendance(int id):
+If the id of the student exists in the register, it should print the attendance of the student with ID = id in the following format: "The Attendance of the student with id: {id} is: {attendance}", where id is the id of the student and attendance is the current attendance of the student.
+Otherwise it should print, "The student with id: {id} has been removed due to low attendance".
+int maxAttendance( ): It should return the maximum attendance from the register.
+ 
+
+Constraints
+
+1 ≤ number of students ≤ 50
+1 ≤ number of records ≤ 1000
+ 
+
+Input Format For Custom Testing
+Sample Case 0
+Sample Input For Custom Testing
+
+STDIN     Function 
+-----     -------- 
+5     →   attendancerecords[] Size n = 5
+1     →   attendancerecords = [ 1, 2, 3, 1, 2 ] 
+2
+3
+1
+2
+3    →   m = 3
+2 A  →   m = [ '2 A', '3 A' , '1 A' ]
+3 A
+1 A
+1    →   limit = 1
+1    →   personal attendance id = 1
+
+
+ 
+
+Sample Output
+
+The attendance of student with id: 2 has been reduced by one
+The attendance of student with id: 3 has been reduced by one
+The attendance of student with id: 1 has been reduced by one
+Removing students with less attendance
+The Attendance of the student with id: 1 is: 1
+The maximum attendance is: 1
+Explanation
+
+The first three lines are for the change of attendance. The next lines are for reduceRegister( ), personalAttendance( ) and maxAttendance( ) respectively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>What is output
+
+public class Sttring {
+        public static void main(String args[]){
+        String s1 = "a1b2c3";
+        String[] tokens = s1.split("\\d");
+        for(String s: tokens)
+            System.out.print(s);
+        System.out.println("");
+        s1 = "a1b2c3";
+        String[] tokenss = s1.split("[123]");
+        for(String s: tokenss)
+            System.out.print(s);
+        System.out.println("");
+        s1 = "d1e2f3";
+        String[] tokens1 = s1.split("[def]");
+        for(String s: tokens1)
+            System.out.print(s);
+        System.out.println("");
+        s1 = "a1b2c3";
+        String[] tokens2 = s1.split("[a-z]");
+        for(String s: tokens2)
+            System.out.print(s);
+        System.out.println("");
+        s1 = "x y z";
+        String[] tokens4 = s1.split("\\s");
+        for(String s: tokens4)
+            System.out.print(s);
+        }
+}
+
+
+
+
+
+
+
+>>The math scores of each student have been stored in the STUDENT table. Write a query to print the ID and the NAME of each of the three highest scoring students. Print the NAMEs in descending order by SCORE, then ascending order by ID for matching SCOREs.
+
+ 
+
+Input Format
+
+STUDENT
+Name	Type	Description
+ID	Integer	A student ID in the inclusive range [1, 1000]. This field is the primary key.
+NAME	String	A student name. This field contains between 1 and 100 characters (inclusive).
+SCORE	Float	The Math score of the student.
+ 
+
+Output Format
+
+The result should contain the IDs and the NAMEs of the three highest scoring students. Print the records in descending order by SCORE, then ascending order by ID for matching SCOREs.
+
+STUDENT.ID STUDENT.NAME
+ 
+
+Sample Input
+
+STUDENT
+ID	NAME	SCORE
+1	Bob	50
+2	John	65.5
+3	Harry	45
+4	Dick	85
+5	Dev	25
+6	Sid	98
+7	Tom	90
+8	Julia	70.5
+9	Erica	81
+10	Jerry	85
+ 
+
+Sample Output
+
+6 Sid
+7 Tom
+4 Dick
+ 
+
+Explanation
+
+The students are arranged in the descending order of their math scores, followed by the ascending order of their ids, as shown below:
+
+ 
+
+Sid > Tom > Dick > Jerry > Erica > Julia > John > Bob > Harry > Dev
+
+ 
+
+Dick's and Jerry's scores were the same, so they are shown in ID order.
+
+
+>> What is the output of below program ?
+public class ArrayListEx {
+    public static void main(String args[]) {
+        ArrayList obj = new ArrayList();
+        obj.add("A");
+        obj.add("B");
+        obj.add("C");
+        obj.add(1, "D");
+        System.out.println(obj);
+    }
+}
+ 
+
+
+
+
+>> Array declaration
+Which of these array declaration statements are not legal?
+
+ 
+
+             a) int[] i[] = { { 1, 2 }, { 1 }, {}, { 1, 2, 3 } };
+             b) int[] k[] = { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } }, b = { 20 };
+             c) int[] j[][] = { { {1,1} , {2,2} , {3,3} } };
+             d) int x[] = new int[2] {1, 2};
+             e) int y[][] = new int[][] { {1, 2, 3}, {4, 5, 6} };
+             f) int z[][] = { { 1, 2 }, new int[ 2 ] };
+
+
+
+
+
+
+>> Lambda expression
+What is the return type of lambda expression?
+
+
+
+>> Executor and ExecutorService
+Which is incorrect in terms of Executor and ExecutorService?
+
+Pick ONE OR MORE options
+
+Executor interface extends the Executors interface from java.util.concurrent.executors
+
+Executor is a very simple interface with a single execute method accepting Runnable instances for execution.
+
+ExecutorService extends the Executor interface with multiple methods for handling and checking the lifecycle of a concurrent task execution service
+
+ExecutorService has methods for more complex synchronous task handling including Futures.
+
+ThreadPoolExecutor , ScheduledThreadPoolExecutor and ForkJoinPool are implementations of ExecutorServices
+
+
+
+
+>>Factory design pattern and abstract factory design pattern give the examples
+
+>>Inversion of control, loose coupling
+
+>>What will do to secure your rest end points
+
+>>Explain hibernate cache in details
+
+>>Explain circuit breaker
+
+>>Hystrics
+
+>>There is a list of employee using stream api find the average salary of employees who joined in 2021
+
+>>HashMap - Can key be duplicate 
+
+>>Explain the design paterns you use in spring projects
+
+>>What do you know about Object class when you use it in your code?
+
+>>Explain Obejct class
+
+>>What is Native Query
+
+>>Take a array of Integer and sort it using basic algo and then java 8
+
+>>How to convert Interger to String
+
+>>How to convert array to list
+
+>>What is @QueryParam 
+
+>>Explain AutoConfiguration
+
+>>If I change in properties file and Im taking the value in my code. Does it reflect or we have to restart? 
+Answer We have to restart the application for registering beans
+
+>>Explain all the error codes family we get in postman
+
+>>Explain throw and throws keyword
+
+>>Design patterns in spring for development
+
+>>what is nvl and nvl2 in sql
+
+>>what are the objects in pl sql
+
+>>what is union and unionAll
+
+>>find the duplicates in a table using sql
+
+>>Break and continue statement indetail
+
+>>Enums 
+
+>>BooleanSuplier functional interface
+
+>>TransactionManager
+
+>>If roleback is configured in base class and not in child class, what will happen if roleback occurs in child class?
+
+>>Autowired by type
+
+>>assertionclass
+
+>>How to disable test methods in junit/mockito
+
